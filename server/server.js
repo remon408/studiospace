@@ -8,6 +8,7 @@ const studioRoutes = require('./routes/studios');
 const bookingRoutes = require('./routes/bookings');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/user');
+const wishlistRoutes = require('./routes/wishlist');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,6 +22,7 @@ app.use('/api/studios', studioRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/wishlist', wishlistRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', server: 'StudioSpace API' }));
 
